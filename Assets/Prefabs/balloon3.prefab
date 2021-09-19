@@ -107,8 +107,8 @@ GameObject:
   - component: {fileID: 2221152504266828475}
   - component: {fileID: 7172009688991797389}
   - component: {fileID: 3509590243631164532}
-  - component: {fileID: 7984282741649790181}
   - component: {fileID: 5826676007987495408}
+  - component: {fileID: 5822728099736606102}
   m_Layer: 0
   m_Name: balloon3
   m_TagString: Untagged
@@ -180,18 +180,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7984282741649790181
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2920663213267605672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3231d504aff5be949af0750b8a1c14e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!136 &5826676007987495408
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -206,3 +194,20 @@ CapsuleCollider:
   m_Height: 0.037496924
   m_Direction: 1
   m_Center: {x: 0, y: 0.021358225, z: 0}
+--- !u!114 &5822728099736606102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2920663213267605672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9f60fbb803d0b94fb1c8da813a03636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 50
+  radius: 0.5
+  speed: 1
+  offsetIsCenter: 1
+  offset: {x: 0, y: 0, z: 0}

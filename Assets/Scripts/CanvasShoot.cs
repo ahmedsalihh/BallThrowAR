@@ -9,7 +9,6 @@ public class CanvasShoot : MonoBehaviour
     public float fireRte = 15f;
     private float nextTimeToFire = 0f;
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetButtonDown("Fire1") && Time.time >= nextTimeToFire)
