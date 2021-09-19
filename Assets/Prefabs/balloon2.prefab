@@ -108,7 +108,7 @@ GameObject:
   - component: {fileID: 2876936032421981342}
   - component: {fileID: 8417341500370931815}
   - component: {fileID: 7896053481098654662}
-  - component: {fileID: -7456329803942335780}
+  - component: {fileID: 4869523185103824744}
   m_Layer: 0
   m_Name: balloon2
   m_TagString: Untagged
@@ -192,8 +192,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3231d504aff5be949af0750b8a1c14e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &-7456329803942335780
-BoxCollider:
+--- !u!136 &4869523185103824744
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -202,6 +202,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.030200262, y: 0.0400492, z: 0.030200262}
-  m_Center: {x: 0, y: 0.020082077, z: 4.656613e-10}
+  m_Radius: 0.015100131
+  m_Height: 0.037496924
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.021358225, z: 0}

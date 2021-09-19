@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4777718305355163800}
   - component: {fileID: 1256878230776353889}
   - component: {fileID: 600208763145609109}
-  - component: {fileID: -985706254526270788}
   - component: {fileID: -3761965563691728058}
+  - component: {fileID: 7802467239845395334}
   m_Layer: 0
   m_Name: balloon1
   m_TagString: Untagged
@@ -97,19 +97,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3231d504aff5be949af0750b8a1c14e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &-985706254526270788
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 670334975291859133}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.030200262, y: 0.0400492, z: 0.030200262}
-  m_Center: {x: 0, y: 0.020082077, z: 4.656613e-10}
 --- !u!54 &-3761965563691728058
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,6 +113,20 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!136 &7802467239845395334
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670334975291859133}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.015100131
+  m_Height: 0.037496924
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.021358225, z: 0}
 --- !u!1 &8825657240670639123
 GameObject:
   m_ObjectHideFlags: 0
