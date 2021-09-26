@@ -10,16 +10,19 @@ public class SpawnScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(StartSpawn());
+        //StartCoroutine(StartSpawn());
+        StartSpawn();
     }
 
-    IEnumerator StartSpawn() {
-        yield return new WaitForSeconds(4);
+    void StartSpawn()
+    {
+        //yield return new WaitForSeconds(4);
 
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 3; i++)
+        {
             Instantiate(balloons[i], spawnPoints[i].position, Quaternion.identity);
         }
 
-        StartCoroutine(StartSpawn());
+        //StartCoroutine(StartSpawn());
     }
 }

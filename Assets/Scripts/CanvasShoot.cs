@@ -5,7 +5,7 @@ public class CanvasShoot : MonoBehaviour
     public Rigidbody ball;
     public GameObject arCamera;
 
-    public float force = 350f;
+    public float force = 400f;
     public float fireRte = 15f;
     private float nextTimeToFire = 0f;
 

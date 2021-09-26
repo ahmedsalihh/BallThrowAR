@@ -4,30 +4,34 @@ public class Target : MonoBehaviour
 {
     public float health = 50f;
 
+
+    public float speed;
+    public float width;
+    public float height;
+
     float timeCounter = 0f;
-
-    public float speed = 2f;
-    public float width = 0.5f;
-    public float height = 0.5f;
-
     Vector3 startPoint;
+
+    int direction;
 
     void Start()
     {
+        int number = Random.Range(1, 255);
+        direction = number % 2 == 0 ? 1 : -1;
+
+        Debug.Log(gameObject.name);
+        Debug.Log(direction);
         startPoint = new Vector3(transform.position.x, transform.position.y, transform.position.z);
     }
 
     // Update is called once per frame
     void Update()
     {
-        //transform.Translate(Vector3.up * Time.deltaTime * 0.2f);
-        //transform.RotateAround(gameObject.transform.position, Vector3.up, Time.deltaTime * 0.2f);
-        //transform.RotateAround(gameObject.transform.position, Vector3.up, 20 * Time.deltaTime);
 
         timeCounter += Time.deltaTime * speed;
 
-        float x = Mathf.Cos(timeCounter * width) + startPoint.x;
-        float y = Mathf.Sin(timeCounter * height) + startPoint.y;
+        float x = direction *  Mathf.Cos(timeCounter) * width + startPoint.x;
+        float y = Mathf.Sin(timeCounter) * height + startPoint.y;
         float z = startPoint.z;
 
         transform.position = new Vector3(x, y, z);
