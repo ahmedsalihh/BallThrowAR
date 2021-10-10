@@ -21,6 +21,6 @@ public class CanvasShoot : MonoBehaviour
     void Shoot()
     {
         Rigidbody ballGO = Instantiate(ball, arCamera.transform.position + arCamera.transform.forward * 0.5f, Quaternion.LookRotation(arCamera.transform.forward, arCamera.transform.up));
-        ballGO.AddForce(arCamera.transform.forward * force);
+        ballGO.AddForce(Camera.main.transform.forward * force);
     }
 }

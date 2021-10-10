@@ -1,28 +1,23 @@
-using System.Collections;
 using UnityEngine;
 
 public class SpawnScript : MonoBehaviour
 {
-
     public Transform[] spawnPoints;
     public GameObject[] balloons;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
-        //StartCoroutine(StartSpawn());
         StartSpawn();
     }
 
     void StartSpawn()
     {
-        //yield return new WaitForSeconds(4);
 
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < spawnPoints.Length; i++)
         {
-            Instantiate(balloons[i], spawnPoints[i].position, Quaternion.identity);
+            GameObject target = Instantiate(balloons[i], spawnPoints[i].position, Quaternion.identity);
+            Rigidbody rbTarget = target.GetComponent<Rigidbody>();
+            rbTarget.AddForce((Camera.main.transform.position - target.transform.position).normalized * 5000f);
         }
-
-        //StartCoroutine(StartSpawn());
     }
 }
