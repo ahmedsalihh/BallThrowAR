@@ -18,24 +18,7 @@ public class Target : MonoBehaviour
         int number = Random.Range(1, 255);
         direction = number % 2 == 0 ? 1 : -1;
         startPoint = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-
-        //Rigidbody rbTarget = gameObject.GetComponent<Rigidbody>();
-        //Vector3 angularForce = AddForceAtAngle(speed, 100f, direction, startPoint);
-        //
-        //Debug.Log(angularForce);
-        //
-        //rbTarget.AddForce(angularForce);
     }
-
-    //public Vector3 AddForceAtAngle(float force, float angle, int direction, Vector3 startPoint)
-    //{
-    //    angle *= Mathf.Deg2Rad;
-    //    float xComponent = direction * Mathf.Cos(angle) * width + startPoint.x;
-    //    float yComponent = Mathf.Sin(angle) * height + startPoint.y;
-    //    float zComponent = gameObject.transform.position.z;
-    //
-    //    return new Vector3(xComponent, yComponent, zComponent);
-    //}
 
     // Update is called once per frame
     void Update()
