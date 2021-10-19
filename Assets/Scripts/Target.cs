@@ -4,7 +4,6 @@ public class Target : MonoBehaviour
 {
     public float health = 100f;
 
-
     public float speed;
     public float width;
     public float height;
@@ -23,7 +22,6 @@ public class Target : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         timeCounter += Time.deltaTime * speed;
         
         float x = direction *  Mathf.Cos(timeCounter) * width + gameObject.transform.position.x;
@@ -31,11 +29,15 @@ public class Target : MonoBehaviour
         float z = gameObject.transform.position.z;
         
         transform.position = new Vector3(x, y, z);
+    }
 
-        //if (transform.position.y > 1f)
-        //{
-        //    Destroy(gameObject);
-        //}
+    void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log(collision.gameObject.tag);
+        if (collision.gameObject.tag == "zone")
+        {
+            Die();
+        }
     }
 
     public void TakeDamage(float amount)
